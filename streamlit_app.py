@@ -31,7 +31,11 @@ with tab_benchmark:
     st.subheader("Accuracy Analysis")
     st.image("figures/RDF_benchmark_kimEAM.png", caption="RDF with the Kim EAM potential")
     st.image("figures/RDF_benchmark.png", caption="RDF only with the ML potentials")
-    st.image("figures/TotEnergyBench.png", caption="MD sim stability based on total energy")
+    # st.image("figures/TotEnergyBench.png", caption="MD sim stability based on total energy")
+    st.image("figures/AccForceMagBench.svg", caption="The magnitude of the forces based on the AIMD trajectory")
+    st.image("figures/AccForceDiffMagBench.svg", caption="The magnitude of the difference between the ML FF calculated forces and DFT forces")
+    st.image("figures/AccForceCosSimBench.svg", caption="The cosine similarity between the ML FF calculated forces and DFT forces")
+    st.image("figures/AccForceMagAtomFacetBench.svg", caption="The magnitude of the forces faceted over all atoms")
 
 
 
