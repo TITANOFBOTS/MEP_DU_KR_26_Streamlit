@@ -8,7 +8,7 @@ st.title("MEP progress report")
 
 
 # Create tabs
-tab_home, tab_benchmark = st.tabs(["🏠 Home", "📈 Benchmark"])
+tab_home, tab_benchmark, tab_geometry_convergence = st.tabs(["🏠 Home", "📈 Benchmark", "📐 Geometry Convergence"])
 
 # ----------------- Home Tab -----------------
 with tab_home:
@@ -42,6 +42,42 @@ with tab_benchmark:
     st.image("figures/AccForceMagAtomFacetBench_1em7SCF.svg", caption="The magnitude of the forces faceted over all atoms (SCF convergence < 1e-7)")
 
 
+with tab_geometry_convergence:
+    st.header("Nanoparticle Geometry Convergence Data")
+    # st.write("This section contains data related to the nanoparticle convergence of geometries in the MEP project.")
+    st.write("To investigate the nanoparticle geometry convergence, two different initial geometries were created: \
+             a BCC nanoparticle and a Wulff constructed nanoparticle. " \
+             "Both nanoparticles were created with approximately the same number of atoms (around 500-600 atoms). " \
+             "The BCC structure was created by expanding a BCC cell evenly in the [100], [110], and [111] directions, " \
+             "while the Wulff nanoparticle was generated using surface energies calculated with DFT from a paper." \
+             " Both structures were then subjected to molecular dynamics simulations at 305 K (melting point) for 20 ps using the ORBv3 conservative uMILP. " \
+             "Then the geometries were heated to 1000 K for 100 ps in order to stimulate the global reconstruction of the nanoparticle and finally cooled back down to 305 K for 20 ps. " \
+             "The goal was to observe how each geometry evolves over time and to find the converged nanoparticle geometry.")
+    
+    
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("BCC Created Nanoparticle")
+        st.video('https://youtu.be/DPnWprosEsc')
+
+    with col2:
+        st.subheader("Wulff Created Nanoparticle")
+        st.video('https://youtu.be/-Z8JtEORtpM')
+
+
+    col3, col4 = st.columns(2)
+    with col3:
+        st.subheader("RDF evolution")
+        st.video('https://youtu.be/cSbXw3rtizQ')
+
+    with col4:
+        st.subheader("RDF difference evolution")
+        st.video('https://youtu.be/6aH4MR-l3wE')
+
+    st.image('figures/RDFdiffGeomConvergence.png', caption="RDF difference between the two geometries over time")
+
+        
 
 
 
