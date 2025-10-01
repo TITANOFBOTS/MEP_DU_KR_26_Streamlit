@@ -15,7 +15,7 @@ with tab_home:
     st.header("Welcome")
     st.write("In this report the progress on the MEP project is summarized.")
     st.write("Use the tabs above to navigate through different sections of the report.")
-    st.write("current tabs: Home, Benchmark")
+    st.write("current tabs: Home, Benchmark, Geometry Convergence")
 
 
 
@@ -32,6 +32,7 @@ with tab_benchmark:
     st.image("figures/RDF_benchmark_kimEAM.png", caption="RDF with the Kim EAM potential")
     st.image("figures/RDF_benchmark2.png", caption="RDF only with the ML potentials")
     # st.image("figures/TotEnergyBench.png", caption="MD sim stability based on total energy")
+    st.image("figures/AccForceMagParity_1em7SCF.svg", caption="The parity plot between the ML FF calculated forces and DFT forces (SCF convergence < 1e-7)")
     st.image("figures/AccForceMagBench.svg", caption="The magnitude of the forces based on the AIMD trajectory (SCF convergence < 1e-6)")
     st.image("figures/AccForceMagBench_1em7SCF.svg", caption="The magnitude of the forces based on the AIMD trajectory (SCF convergence < 1e-7)")
     st.image("figures/AccForceDiffMagBench.svg", caption="The magnitude of the difference between the ML FF calculated forces and DFT forces (SCF convergence < 1e-6)")
