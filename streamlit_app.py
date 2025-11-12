@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import py3Dmol
 import nglview as nv
 from ase.io import read, write
 
