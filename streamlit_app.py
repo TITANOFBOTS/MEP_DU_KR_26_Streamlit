@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import nglview as nv
-from ase.io import read, write
+# import nglview as nv
+# from ase.io import read, write
 
 
 st.set_page_config(page_title="MEP progress report", layout="wide")
@@ -97,9 +97,9 @@ with tab_force_accuracy:
     st.image('figures/FF_bench/CP2K/MD/Ga_NP/parity_plot_force_MACE_Ga_omat24_subset_finetuned_ema_high_lr.png', caption="force parity plot MACE vs DFT for Ga NP MD CP2K trajectory (finetuned with replay and with high learning rate)")   
     st.image('figures/FF_bench/CP2K/MD/Ga_NP/net_forces_DFT_benchmark_base_atoms57_stableF.png', caption="net forces DFT for Ga NP MD CP2K trajectory") 
 
-    md_traj = read('figures/FF_bench/CP2K/MD/Ga_NP/DFT_benchmark_base_atoms57_stableF.traj', index=':')
-    view = nv.show_ase(md_traj)
-    st.html(view._repr_html_())
+    # md_traj = read('figures/FF_bench/CP2K/MD/Ga_NP/DFT_benchmark_base_atoms57_stableF.traj', index=':')
+    # view = nv.show_ase(md_traj)
+    # st.html(view._repr_html_())
 
     st.subheader('Bulk Ga MD CP2K trajectory')
     st.image('figures/FF_bench/CP2K/MD/Ga_bulk/parity_plot_force_MACE-matpes-r2scan-omat-ft.png', caption='force parity plot MACE vs DFT for Ga bulk MD CP2K trajectory')
@@ -125,9 +125,9 @@ with tab_force_accuracy:
     st.image('figures/FF_bench/CP2K/Rattle/Ga_NP/parity_plot_force_orb-v3-conservative-inf-omat-finetuned-v2.png', caption="force parity plot ORBv3-conservative vs DFT for Ga NP Rattle CP2K trajectory (finetuned without replay!)")
     st.image('figures/FF_bench/CP2K/Rattle/Ga_NP/net_forces_Ga_NP_atoms57_rattled.png', caption="net forces DFT for Ga NP Rattle CP2K trajectory")
 
-    rattle_traj = read('figures/FF_bench/CP2K/Rattle/Ga_NP/Ga_NP_atoms57_rattled_subset.xyz', index=':')
-    view = nv.show_ase(rattle_traj)
-    st.html(view._repr_html_())
+    # rattle_traj = read('figures/FF_bench/CP2K/Rattle/Ga_NP/Ga_NP_atoms57_rattled_subset.xyz', index=':')
+    # view = nv.show_ase(rattle_traj)
+    # st.html(view._repr_html_())
 
     st.header('Force Accuracy Benchmarks of Machine Learning Force Fields (VASP)')
     st.image('figures/FF_bench/CP2K/VASP/Rattle/Ga_NP/parity_plot_force_MACE-matpes-r2scan-omat-ft.png', caption="force parity plot MACE-R2SCAN vs DFT for Ga NP Rattle VASP trajectory")
