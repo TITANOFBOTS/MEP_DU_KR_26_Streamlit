@@ -130,8 +130,11 @@ with tab_force_accuracy:
     # st.html(view._repr_html_())
 
     st.header('Force Accuracy Benchmarks of Machine Learning Force Fields (VASP)')
-    st.image('figures/FF_bench/CP2K/VASP/Rattle/Ga_NP/parity_plot_force_MACE-matpes-r2scan-omat-ft.png', caption="force parity plot MACE-R2SCAN vs DFT for Ga NP Rattle VASP trajectory")
-    st.image('figures/FF_bench/CP2K/VASP/Rattle/Ga_NP/parity_plot_force_MACE_Ga_matpes_r2scan_replay_VASP_finetuned_ema_high_lr.png', caption="force parity plot MACE vs DFT for Ga NP Rattle VASP trajectory (finetuned with replay and with high learning rate)")
+    st.image('figures/FF_bench/CP2K/VASP/Rattle/Ga_NP/dataset_0/test/parity_plot_force_MACE-matpes-r2scan-omat-ft.png', caption="force parity plot MACE-R2SCAN vs DFT for Ga NP Rattle VASP trajectory")
+    st.image('figures/FF_bench/CP2K/VASP/Rattle/Ga_NP/dataset_0/test/parity_plot_force_MACE_Ga_matpes_r2scan_replay_VASP_finetuned_ema_high_lr.png', caption="force parity plot MACE vs DFT for Ga NP Rattle VASP trajectory (test set) (finetuned with replay and with high learning rate)")
+    st.image('figures/FF_bench/CP2K/VASP/Rattle/Ga_NP/dataset_0/train/parity_plot_force_MACE-matpes-r2scan-omat-ft.png', caption="force parity plot MACE-R2SCAN vs DFT for Ga NP Rattle VASP trajectory (train set)")
+    st.image('figures/FF_bench/CP2K/VASP/Rattle/Ga_NP/dataset_0/train/parity_plot_force_MACE_Ga_matpes_r2scan_replay_VASP_finetuned_ema_high_lr.png', caption="force parity plot MACE vs DFT for Ga NP Rattle VASP trajectory (train set) (finetuned with replay and with high learning rate)")
+
     st.image('figures/FF_bench/CP2K/VASP/Rattle/Ga_NP/net_forces_vasp_concat.png', caption='net forces DFT for Ga NP paper dataset VASP trajectory')
     st.image('figures/FF_bench/CP2K/VASP/Rattle/Ga_NP/net_forces_rattled_Ga_NP_pool_copy_0611.png', caption='net forces DFT for Ga NP Rattle VASP trajectory')
 
